@@ -33,19 +33,28 @@ function App() {
       {/* invitation */}
       <section className="invitation">
         <div className="invitation__inputs">
-          <input
-            type="radio"
-            name="invitation"
-            id="getStarted"
-            className="invitation__input"
-            checked
-          />
-          <input
-            type="radio"
-            name="invitation"
-            id="Search"
-            className="invitation__input"
-          />
+          <div className="invitation__input-box">
+            <label htmlFor="getStarted" className="invitation__label"></label>
+            <input
+              type="radio"
+              name="invitation"
+              id="getStarted"
+              className="invitation__input"
+              checked
+            />
+          </div>
+          <div className="invitation__input-box">
+            <label
+              htmlFor="searchSection"
+              className="invitation__label"
+            ></label>
+            <input
+              type="radio"
+              name="invitation"
+              id="searchSection"
+              className="invitation__input"
+            />
+          </div>
         </div>
         <h1 className="invitation__title">Welcome to the English Helper app</h1>
         <p className="invitation__description">
@@ -53,7 +62,6 @@ function App() {
         </p>
         <button className="invitation__btn">
           <span className="invitation__btn-text">Get started</span>
-          {/* arrow icon from react icons */}
           <HiOutlineArrowNarrowRight />
         </button>
         <div className="invitation__search-box">
@@ -61,7 +69,6 @@ function App() {
             Search
           </label>
           <input type="search" name="search" id="search" />
-          {/* search icon from react icons */}
           <FiSearch />
         </div>
       </section>
